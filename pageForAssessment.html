@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+
+.column {
+    float: left;
+    padding: 10px;
+    
+}
+
+.left {
+  width: 25%;
+padding-right: 40px; 
+}
+
+.right {
+  width: 75%;
+    min-height: 1px;
+    padding-left: 12px;
+    padding-right: 12px;}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header, .footer {background-color: #2b2b2b; text-align: center; }
+.header {background-color: #222; text-align: center; }
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+color: #2b2b2b;
+    background-color: #FFFFFF;
+font-family: sans-serif;
+}
+html, body {
+    font-size: 17px;
+    line-height: 1.57;
+}
+p {
+    font-weight: 400;
+display: block;
+
+}
+p, ul, ol {
+    margin-bottom: 17px;
+}
+p {
+    margin: 0 0 10px;
+}
+
+h1 {
+    font-family: "Muli",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    background-color: #fff;
+    display: inline-block;
+    margin: 0 2rem 0 0;
+    border-bottom: none;
+    font-size: 36px;
+    font-weight: 700;
+    padding: 0 1.25rem .15rem 0;
+    line-height: 1;
+    color: #052e41;
+}
+
+a {
+    text-decoration: none;
+    color: #39f;
+ }
+
+a:hover {
+    color: #369;
+ }
+
+a.btn-link {
+    border-color: transparent;
+    background-color: transparent;
+    color: #002B7F;
+    text-decoration: underline;
+}
+.p-teaser-learn-more {
+    position: relative;
+    z-index: 9;
+}
+h2 {
+    margin-top: 25px;
+}
+.heading-wrapper h1, .heading-wrapper h2 {
+    padding-right: 30px;
+}
+h2 {
+    margin: 26px 0 17px;
+    font-size: 26px;
+    line-height: 1.307;
+    font-weight: 400;
+    font-family: Helvetica,Arial,"Roboto",sans-serif;
+}
+h4 {
+    margin: 26px 0 17px;
+    font-size: 17px;
+    line-height: 1.53;
+    font-weight: 700;
+    font-family: Helvetica,Arial,"Roboto",sans-serif;
+color: #369;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 0 52px;
+    border-bottom: 1px solid #DADADA;
+    font-size: 14px;
+    vertical-align: middle;
+    text-align: left;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+table {
+    background-color: transparent;
+}
+th, td {
+    border: 1px solid #ddd;
+padding: 5px 7px;
+}
+th, td.head {padding: 14px;
+    font-weight: 700;
+    font-family: Helvetica,Arial,"Roboto",sans-serif;
+    background-color: #EFEFEF;}
+
+.nav {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+font-family: Helvetica,Arial,"Roboto",sans-serif;
+    margin-right: 40px;
+    line-height: 1.2;
+} 
+.nav:before, .nav:after {
+    content: " ";
+    display: table;
+}
+
+
+
+span.mailto {
+    background: url(assets/emailSymbol.JPG) -20px center no-repeat;
+    width: 10px;
+    height: 10px;
+    padding-right: 12px;
+    text-decoration: none;
+}
+
+https://linkprotect.cudasvc.com/url?a=https%3a%2f%2fa.info&c=E,1,wEjKJLxXqUlbOQssqk1QOp-IjO-xeqCfdxy5BE8ia4uUoXJ5l406tbA5RJkJHAIpxofeeHzE_ZYuuHsHlk4n-rhFOlxP4fswrsi2rCPskyRvtFm4a_5ydF0,&typo=1 {
+    padding-right: 20px;
+    background: url(assets/pdfsymbol.JPG) no-repeat right;
+}
+a.ext {
+    padding-right: 20px;
+    background: url(assets/extLinkIcon.JPG) no-repeat right;
+}
+
+a.nav-top {
+    color: #002B7F;
+    font-size: 0.9rem !important;
+    font-weight: bold;
+    padding-left: 0;
+}
+
+.nav li a {
+    text-decoration: none;
+    text-indent: -0.5rem;
+    border-left: none;
+    padding: 0 8px 8px 0;
+    font-size: 0.77rem !important;
+    font-weight: 400;
+    color: #3c3c3c;
+}
+
+.nav li {margin-left: 15px; }
+
+.nav li a:hover {
+    color: #399;
+}
+.nav li a:hover:before {
+    content: " > ";
+    margin-left: -10px; 
+}
+.left header {
+    border-bottom: 1px solid #DADADA;
+    padding-bottom: 10px;
+    margin-bottom: 6px;
+}
+
+.left footer a {
+    font-size: 0.75rem !important;
+    text-align: right !important;
+}
+.left footer {
+    border-top: 1px solid #DADADA;
+    padding-top: 10px;
+}
+
+p.FR {
+    float: right;  
+    padding: 5px; 
+    border: 2px dotted #ccc; 
+    width: 20%; 
+margin: 0 0 5px 5px;
+    font-size: .75em; 
+    font-weight: bold; 
+    background-color: #f2f2f2;
+}
+
+</style>
+</head>
+<body>
+
+<div class="row header"><img src="assets/headerImage.JPG" alt="header"/></div>
+
+<div class="row" style="margin: 0 auto; max-width: 1220px;">
+  <div class="column left" >
+    <header>    <a href="#" class="nav-top">Road safety</a>  </header>  
+<nav id="ottawa-anchor-menu-toc" role="navigation">
+<ul class="nav">
+  <li class=""><a href="#safer-roads-ottawa-program">Safer Roads Ottawa Program</a></li>
+  <li class=""><a href="#annual-safety-reports">Annual safety reports</a></li>
+  <li class=""><a href="#awareness-campaigns">Awareness Campaigns</a></li>
+  <li class=""><a href="#pedestrian-safety">Pedestrian safety</a></li>
+  <li class="active"><a href="#pedestrian-crossovers">Pedestrian Crossovers</a></li>
+  <li><a href="#cycling-safety">Cycling safety</a></li>
+  <li><a href="#safe-driving">Safe Driving</a></li>
+  <li><a href="#motorcycle-safety">Motorcycle Safety</a></li>
+  <li><a href="#bill-31-changes-highway-traffic-act">Bill 31 – Changes to the Highway Traffic Act</a></li>
+  <li><a href="#community-tool-kit">Community Tool Kit</a></li>
+  <li><a href="#2018-selective-traffic-enforcement-program-step">2018 Selective Traffic Enforcement Program (STEP)</a></li></ul>
+</nav>  <footer>    <a href="#" class="nav-top" aria-label="Back to top of page">Top</a>  </footer>
+  </div> <!-- end left column -->
+
+
+  <div class="column right" >
+    
+
+ <div class="pane-content">
+    <h1>Road safety</h1>
+  </div>
+
+<div class="pane-content">
+  <article class="node node-ottawa-long-page node-teaser clearfix">
+  <h2 class='long-page-title'>Safer Roads Ottawa Program</h2>
+   
+  <p>The Safer Roads Ottawa Program is a leading community partnership between Ottawa Fire Services, Ottawa Paramedic Service, Ottawa Police Service, Ottawa Public Health and the Public Works Department committed to preventing or eliminating road deaths and serious injuries for all people in the City </p>
+<a href="safer-roads-ottawa-program" class="p-teaser-learn-more btn-link" aria-label="Learn More: Safer Roads Ottawa Program">Learn More</a>
+  </article>
+</div> <!-- end pane-content -->
+
+
+<div class="pane-content">
+  <article class="node node-ottawa-long-page node-teaser clearfix">
+  <h2 class='long-page-title'>Annual safety reports</h2>
+	<p class="FR">Le rapport annuel sur les collisions présente des données statistiques relatives aux collisions survenues sur les routes d’Ottawa, et ce, durant une période de cinq ans.</p>
+  <p>The annual collisions report provides statistical data on all reported collisions on City of Ottawa roads during a five year period.</p>
+<a href="annual-safety-reports" class="p-teaser-learn-more btn-link" aria-label="Learn More: Annual safety reports">Learn More</a>
+  </article>
+</div> <!-- end pane-content -->
+
+
+<div class="pane-content">
+  <article class="node node-ottawa-article node-teaser clearfix">
+    <h2>Pedestrian safety</h2>  
+    <p>Remember to “Walk like your life depends on it!” and be aware of your surroundings!</p>
+    <p>The City of Ottawa has an extensive program to make streets safer for pedestrians that includes measures such as:</p>
+
+	<h4>Accessible Pedestrian Signals (APS)</h4>
+	<p><a href="accessible-pedestrian" rel="nofollow">Accessible pedestrian signals</a> (APS), formerly known as audible pedestrian signals, are devices that use audible, tactile, vibrotactile and visible methods to provide information that is accessible to all pedestrians, including people who are blind, visually impaired or deaf-blind.</p>
+
+	<h4>Pedestrian Countdown Signal</h4>
+	<p>The pedestrian countdown signal during the flashing “Don’t Walk” interval offers pedestrians more information on how much time they have to safely cross the intersection. Research has shown that countdown signals lead to fewer pedestrian-car collisions at intersections by providing pedestrians clearer information on when the lights will change. The installation of the pedestrian countdown signal will be done when a new traffic control signal or pedestrian signal is being installed, when an existing traffic control signal or pedestrian signal is being rebuilt as part of a road construction project, or through the Pedestrian Countdown Signal Installation Program. There are currently over 850 intersections across the city equipped with pedestrian countdown signals.</p>
+
+	<h4>The Pedestrian Plan</h4>
+	<p>The City produces a comprehensive <a href="ottawa-pedestrian-plan" rel="nofollow">Pedestrian Plan</a> as part of the Transportation Master Plan to better integrate pedestrian travel into the transportation system.</p>
+
+	<h4>School Zone Traffic Safety Program</h4>
+	<p>Many children are walking and biking to school on our roads. However, younger children often lack the skills to negotiate traffic safely. Help them to walk - safely to school - by stressing important&nbsp;<a href="school-zone-traffic-safety" rel="nofollow">safety rules</a>.</p>
+  </article>
+</div> <!-- end pane-content -->
+
+
+
+
+<div class="pane-content">
+  <article class="node node-ottawa-article node-teaser clearfix">
+
+<h2>Pedestrian Crossovers</h2>
+<p><b>Refer to the image on the right for an example of a crossover sign</b></p>
+<p style="float: right;"><img alt="sign" class="image-actual" height="312" src="assets/pxo_sign.png" width="154" /></p>
+<p>Pedestrian Crossovers are a type of traffic control used in Ottawa. Crossovers and their associated crosswalks are located at low speed, low-medium volume intersections, midblock and at roundabouts. &nbsp;Learn about the form, function and usage of pedestrian crossovers and see where in Ottawa they are installed.</p>
+
+<h3>What is a Pedestrian Crossover?</h3>
+
+<p>Pedestrian Crossovers are designated areas that allow pedestrians to safely cross roads where vehicles must yield to pedestrians when crossing. Pedestrian Crossovers are identified by specific signs and pavement markings. In some cases, but not always, they may also have pedestrian activated flashing beacons.</p>
+<p><a class="info" href="https://linkprotect.cudasvc.com/url?a=http%3a%2f%2fdocuments.ottawa.ca%2fsites%2fdefault%2ffiles%2fpxo_infographic_1_en.pdf&c=E,1,f3PkzUFl2lrtU0BD2J1vHNX47LZIF0T0XJ9ftWVGxIMRzCWSJVeFWumuuYvUfGWcGeAt1SizE3p5E6SUcqpx4o7GIo8GUukVDQl2A6w7XJHjYBxR1xia&typo=1">Infographic - all road users</a></p>
+<div class="embeddedContent oembed-provider- oembed-provider-youtube" data-align="none" data-oembed="https://youtu.be/8Vb_-qaw0bM" data-resizetype="noresize" data-title=" New Pedestrian Crossovers in Ottawa"><iframe allowfullscreen="true" allowscriptaccess="always" frameborder="0" height="349" scrolling="no" src="http://www.youtube.com/embed/8Vb_-qaw0bM?wmode=transparent&#x26;jqoemcache=9e03s" title=" New Pedestrian Crossovers in Ottawa" width="425"></iframe></div>
+
+<p>Visit our <a href="https://www.youtube.com/watch?v=8Vb_-qaw0bM" class="ext" rel="nofollow">YouTube Page</a> and click "show more" for the descriptive video text.</p>
+<h3><strong>Pedestrian Crossovers in Ottawa</strong></h3>
+
+<p>The City of Ottawa will be installing up to 60 Pedestrian Crossovers each year for the next three years as part of a City Council approved pilot program. &nbsp;Crossovers will be situated at warranted locations throughout the city, starting in the summer of 2016. In the first year, these locations will include: new crossings where no crossing existed before, retrofitting of existing crossings, and roundabouts.</p>
+<h3>Pedestrian Crossover Locations</h3><p>Pedestrian Crossovers will be installed on low speed, low to medium volume roads, and at most roundabouts.</p>
+
+<p>The locations of the planned 2016 Pedestrian Crossovers in Ottawa are shown in the map and table below. The list will be updated as new warranted locations are added.</p>
+
+<h4><a href="https://Pedestrian_Crossover5.pdf" name="maplist">Map</a>&nbsp;of Pedestrian Cross over Locations:</h4>
+
+<h4>List of Pedestrian Crossing Locations</h4>
+
+<table>
+	<thead>
+		<tr>
+			<td class="head"><strong>Location</strong></td>
+			<td class="head"><strong>Ward</strong></td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Des Epinettes between Cottonwood W and Lafrance</td>
+			<td>Orleans</td>
+		</tr>
+		<tr>
+			<td>Lawnsberry - 190 m S of Jeanne D'Arc</td>
+			<td>Orleans</td>
+		</tr>
+		<tr>
+			<td>Lawnsberry - 40 m E of Elderberry</td>
+			<td>Orleans</td>
+		</tr>
+		<tr>
+			<td>Lawnsberry - 65 m N of Mockingbird</td>
+			<td>Orleans</td>
+		</tr>
+		<tr>
+			<td>Beausejour at Des Sapins Gardens</td>
+			<td>Innes</td>
+		</tr>
+		<tr>
+			<td>Renaud between Melodie and Compass&nbsp;</td>
+			<td>Innes</td>
+		</tr>
+		<tr>
+			<td>Beatrice / Mountshannon at Longfields</td>
+			<td>Barrhaven</td>
+		</tr>
+	</tbody>
+</table>
+<h3>Responsibilities of Pedestrians</h3>
+
+<ul>
+	<li>Make an indication that you want to cross and ensure drivers see you before you cross.&nbsp;</li>
+	<li>Cross only when traffic has come to a complete stop and it is safe to do so.</li>
+	<li>Refer to "Roundabouts and Median Divided Roads" Section below for more details at these locations.</li>
+</ul>
+
+<p><a href="https://pxo_infographic_1_en.pdf">Infographic - pedestrians and cyclists&nbsp;</a></p>
+
+<h3>Responsibilities of Drivers</h3>
+
+<ul>
+	<li>Watch for and prepare to stop at Pedestrian Crossovers.</li>
+	<li>Wait until the pedestrian has completely crossed the road (curb to curb) before proceeding.</li>
+	<li>Vehicles must not pass any other vehicle within 30 metres prior to a Pedestrian Crossover.</li>
+	<li>Refer to ?Roundabouts and Median Divided Roads? Section below for more details at these locations.</li>
+</ul>
+
+<p><a href="https://pxo_infographic_1_en.pdf">Infographic - drivers and cyclists&nbsp;</a></p>
+
+<h3>Responsibilities of Cyclists</h3>
+
+<ul>
+	<li>&nbsp;When operating as a motor vehicle, cyclists will face the same responsibilities and fines as drivers - the new law requires cyclists to stop and yield the whole roadway to &nbsp;pedestrians.</li>
+	<li>&nbsp;When crossing with pedestrians, follow rules for pedestrians: dismount and walk your bike across the road.</li>
+	<li>Refer to "Roundabouts and Median Divided Roads" Section below for more details at these locations.</li>
+</ul>
+
+<p><a href="https://pxo_infographic_2_en.pdf">Infographic - drivers and cyclists&nbsp;</a><br />
+<a href="https://pxo_infographic_3_en.pdf">Infographic - pedestrians and cyclists&nbsp;</a></p>
+
+<h3>The History of Pedestrian Crossovers in Ottawa</h3>
+
+<p>Pedestrian Crossovers have a local history dating back to the early 1960s when a large number were installed across the greater Ottawa area. There are several types of crossovers which are identified as Type 1 or Type 2 crossovers. Type 1 was used in Ottawa dating back to early 1960's. This type is distinguished by the side mounted signs, overhead signs on wires and flashers. It is the most complex and was used at multi-lane crossings with higher speeds and traffic volumes.</p>
+
+<p>These treatments provided a solution to pedestrian needs for a number of years, but were questioned in terms of safety in the 1970's; as a result, in the mid-1980's, it was decided by Council that mid-block traffic control signals should be used in place of Pedestrian Crossovers and that Pedestrian Crossovers would no longer be implemented. At this time we do not intend to install the Type 1 crossovers again in Ottawa.</p>
+
+<p>When the Making Ontario's Roads Safer Act, or Bill 31, was passed in June, 2015, Type 2 crossovers were created. Pedestrian Crossovers to be installed in Ottawa beginning June 2016 fall under Type 2 designation only.</p>
+
+<p><strong>Type 2 includes three formats:</strong></p>
+
+<p>B - Distinguished by overhead signs, side mounted signs, and rapid rectangular flashing beacons. These are typically used on arterial/major collector roads with higher speeds (up to 60km/h).</p>
+
+<p>C - Distinguished by side mounted signs and rapid rectangular flashing beacons. These are typically used on collector roads, or lower volume multi-lane roundabouts.</p>
+
+<p>D - This type is the most basic. It includes only the side mounted signs. These are typically used on local roads, or single lane roundabouts.</p>
+  </article>
+</div> <!-- end pane-content -->	
+
+
+<div class="pane-content">
+    <article class="node node-ottawa-article node-teaser clearfix"><h2>Motorcycle Safety</h2>
+<p>In Ottawa from 2009-2013 people who ride motorcycles were involved in 790 collisions leading to 12 fatalities and 542 injuries on Ottawa streets. &nbsp;</p>
+
+<p>People who ride motorcycles are considered vulnerable road users for the following reasons:</p>
+
+<ul>
+	<li>Motorcyclists have on two points of contact on the road and require great skill, balance and diligence to prevent collisions.&nbsp;</li>
+	<li>Motorcyclist are small so they are difficult to see and gauging their speed and distance</li>
+</ul>
+
+<p>The Ottawa Safety Council offers motorcycle training for all skill levels. Visit <a href="https://linkprotect.cudasvc.com/url?a=http%3a%2f%2fwww.ottawasafetycouncil.ca%2f&c=E,1,bQmJOcwisTYUfN0iL3MPvF5uu5h4dO96YMTMQbuEls1Hg2cY4nyhHquZUUJ-o8BnBjYDjS7FuPfXd0EuGmQnAX_79QK0MJvieWZ8Drqe&typo=1" rel="nofollow">www.ottawasafetycouncil.ca</a> for more information.</p>
+
+<p>Every May, the motorcycle community of Ottawa and SRO launches ?Keep an Eye Out for Motorcycle? campaign.&nbsp;</p>
+
+<h4>Tips for Motorist&nbsp;</h4>
+
+<ul>
+	<li>Keep a safe distance when following a motorcycle - at least two seconds</li>
+	<li>Motorcycles use a full lane - treat them like other vehicles</li>
+	<li>Check your mirrors and blind spots frequently, especially before changing lanes -a motorcycle is small enough to be entirely hidden within your blind spot</li>
+	<li>Pay special attention at intersections, where almost 50% of motorcycle collisions occur</li>
+</ul>
+
+
+  </article>
+</div> <!-- end pane-content -->	
+
+
+
+<div class="pane-content">
+    <article class="node node-ottawa-article node-teaser clearfix">
+<h2>2018 Selective Traffic Enforcement Program (STEP)</h2>
+ <p>&nbsp;<strong>Table 1 - 2018&nbsp;Selective Traffic Enforcement Program (STEP)</strong></p>
+
+<table role="presentation">
+	<thead>
+		<tr>
+			<th>Month</th>
+			<th>Theme #1</th>
+			<th>Theme #2</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+			<p>January</p>
+			</td>
+			<td>
+			<p>Follow too Close</p>
+			</td>
+			<td>
+			<p>Stop Sign Violation</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>February</p>
+			</td>
+			<td>
+			<p>Vehicle Occupant Restraints<br />
+			(includes child car seats)</p>
+			</td>
+			<td>
+			<p>Red Light Running</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>March</p>
+			</td>
+			<td>
+			<p>Distracted Driving</p>
+			</td>
+			<td>
+			<p>Speeding</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>April</p>
+			</td>
+			<td>
+			<p>School Bus / School Zone&nbsp;<br />
+			Safety</p>
+			</td>
+			<td>
+			<p>Cycling Safety</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>May</p>
+			</td>
+			<td>
+			<p>Motorcycle Safety</p>
+			</td>
+			<td>
+			<p>Unsafe Vehicles and Heavy<br />
+			Trucks</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>June</p>
+			</td>
+			<td>
+			<p>Pedestrian Safety</p>
+			</td>
+			<td>
+			<p>Construction Zones</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>July</p>
+			</td>
+			<td>
+			<p>Cycling Safety</p>
+			</td>
+			<td>
+			<p>Red Light Running</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>August</p>
+			</td>
+			<td>
+			<p>Impaired Driving</p>
+			</td>
+			<td>
+			<p>Roundabouts</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>September</p>
+			</td>
+			<td>
+			<p>School Bus/School Zone<br />
+			Safety</p>
+			</td>
+			<td>
+			<p>Vehicle Occupant Restraints<br />
+			(includes child car seats)</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>October</p>
+			</td>
+			<td>
+			<p>Distracted Driving</p>
+			</td>
+			<td>
+			<p>Speeding</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>November</p>
+			</td>
+			<td>
+			<p>Red Light Running</p>
+			</td>
+			<td>
+			<p>Stop Sign Violations</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>December</p>
+			</td>
+			<td>
+			<p>Impaired Driving</p>
+			</td>
+			<td>
+			<p>Unsafe Lane Changes</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Ottawa's Selective Traffic Enforcement Program (S.T.E.P.) is implemented under the banner of Safer Roads Ottawa. Each month, two traffic safety priorities (themes) are highlighted for additional enforcement. An analysis of the City's traffic collision / injury data helps to determine the level of emphasis that each traffic safety priority receives. The severity of the issue will dictate if some themes receive additional months of enforcement.</p>
+
+<h3>Background information</h3>
+
+<p>In terms of timing of specific themes, consideration is given to the following:</p>
+
+<ul>
+	<li>Annual national / provincial campaigns</li>
+	<li>Seasonal road safety topics (e.g.. impaired driving in December and school bus / school zone traffic safety in September and March)</li>
+	<li>Dates of Safer Roads Ottawa campaigns and initiatives</li>
+</ul>
+
+<p>Please visit <a href="https://linkprotect.cudasvc.com/url?a=http%3a%2f%2fwww.ottawapolice.ca%2fen%2fabout-us%2fSafer-Roads-Ottawa.asp&c=E,1,uuZ6GeRi_cfFdeRomuVWhrdxurkl5e5eNkENz1taWvQV59zt89RyhF8C5uM2oVCpIJfmnUD3CCeoAXQjWqtp7DkTsxssynCh0rU5mijZ1z0,&typo=1" rel="nofollow">http://www.ottawapolice.ca/en/about-us/Safer-Roads-Ottawa.asp</a> for more information.</p>
+  </article>
+</div> <!-- end pane-content -->	
+
+
+  </div> <!-- end right column -->
+
+
+
+
+
+
+
+
+</div><!-- end row -->
+
+
+<div class="row footer"><img src="assets/footerImage.JPG"></div>
+
+</body>
+</html>
